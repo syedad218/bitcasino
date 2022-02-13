@@ -56,7 +56,7 @@ function App() {
           <Grid item sm={12} md={8}>
             <div className="title">
               <img src={logo} alt="logo" />
-              <h1>Now you can track all your cryptos here!</h1>
+              <h1 className="text">Now you can track all your cryptos here!</h1>
               <h3 className="subtext">
                 Just enter the cryptocurrency code on the form to the right.
               </h3>

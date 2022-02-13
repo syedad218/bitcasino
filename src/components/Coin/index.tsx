@@ -1,6 +1,8 @@
 import { FC } from "react";
 import { Action, Coin } from "../../App/types";
 import CloseIcon from "@mui/icons-material/Close";
+import tropyIcon from "../../assets/icon.svg";
+import { CoinListContainer, CoinDetails, CloseCoin } from "./styled";
 
 interface Props {
   dispatch: (action: Action) => void;
@@ -9,20 +11,16 @@ interface Props {
 
 const CoinWrapper: FC<Props> = ({ dispatch, coin }) => {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        width: "300px",
-        justifyContent: "space-between",
-        maxWidth: "100px",
-      }}
-    >
-      <div>{`${coin.symbol}`}</div>
-      <div onClick={() => dispatch({ type: "remove", payload: coin })} style={{cursor: 'pointer'}}>
+    <CoinListContainer>
+      <img src={tropyIcon} alt="trophy icon" />
+      <CoinDetails>
+        <div>{`${coin.symbol}`}</div>
+        <div>53.52 $</div>
+      </CoinDetails>
+      <CloseCoin onClick={() => dispatch({ type: "remove", payload: coin })}>
         <CloseIcon />
-      </div>
-    </div>
+      </CloseCoin>
+    </CoinListContainer>
   );
 };
 

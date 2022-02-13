@@ -40,12 +40,15 @@ body {
 }
 
 .title {
+  max-width: 327px;
   color: #fff;
+  line-height: 1.4;
 }
 
 .subtext {
   color: grey;
   font-weight: 500;
+  max-width: 230px;
 }
 
 code {

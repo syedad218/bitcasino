@@ -3,15 +3,14 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { CardContainer, TermsText } from "./styled";
 import Autocomplete from "@mui/material/Autocomplete";
-import TextField from "@mui/material/TextField";
+import TextField, { TextFieldProps } from "@mui/material/TextField";
 import { gql, useQuery } from "@apollo/client";
 import escapeRegExp from "lodash/escapeRegExp";
 import CircularProgress from "@mui/material/CircularProgress";
 import Button, { ButtonProps } from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import { Action, State } from "../../App/types";
-import Snackbar from '@mui/material/Snackbar';
-
+import Snackbar from "@mui/material/Snackbar";
 
 interface Props {
   dispatch: (action: Action) => void;
@@ -43,6 +42,18 @@ const CustomButton = styled(Button)<ButtonProps>(({ theme }) => ({
   },
 }));
 
+const InputField = styled(TextField)<TextFieldProps>({
+  ".MuiInputLabel-root": {
+    fontSize: "12px",
+  },
+  "& label.Mui-focused": {
+    fontSize: "1rem",
+  },
+  ".MuiOutlinedInput-input": {
+    height: "17px",
+  },
+});
+
 const CurencySelector: FC<Props> = ({ dispatch, state }) => {
   const [options, setOptions] = useState<string[]>([]);
   const [value, setValue] = useState<{ label: string; symbol: string } | null>(
@@ -56,8 +67,11 @@ const CurencySelector: FC<Props> = ({ dispatch, state }) => {
     FETCH_COINS_BY_SEARCH_QUERY
   );
 
-  const handleClose = (event: React.SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway') {
+  const handleClose = (
+    event: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -76,6 +90,7 @@ const CurencySelector: FC<Props> = ({ dispatch, state }) => {
     } else {
       // add coins to the list
       dispatch({ type: "add", payload: value });
+      setValue(null);
     }
   };
 
@@ -155,7 +170,7 @@ const CurencySelector: FC<Props> = ({ dispatch, state }) => {
             getOptionLabel={(option) => `${option.label} (${option.symbol})`}
             onInputChange={debouncedInputUpdate}
             renderInput={(params) => (
-              <TextField
+              <InputField
                 {...params}
                 label="CRYPTOCURRENCY CODE"
                 sx={{ fontWeight: "bold" }}
