@@ -19,11 +19,11 @@ export const CoinListContainer = styled.div`
 export const CoinDetails = styled.div`
   margin-left: 32px;
   color: #ffffff;
-  div:first-child {
+  div:first-of-type {
     font-size: 18px;
     font-weight: bold;
   }
-  div:last-child {
+  div:last-of-type {
     font-size: 14px;
     opacity: 0.5;
     margin-top: 8px;
