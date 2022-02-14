@@ -6,6 +6,7 @@ import { CurrencyListWrapper } from "./styled";
 import { Action, State } from "./types";
 import Coin from "../components/Coin";
 import useWidth from "../useWidth";
+import KeyboardDoubleArrowDownIcon from "@mui/icons-material/KeyboardDoubleArrowDown";
 
 export const initialState = {
   coins: [],
@@ -60,7 +61,7 @@ function App() {
             </h3>
           </div>
           <CurrencyListWrapper>
-            <div>
+            <div style={{ maxHeight: "400px", overflow: "auto" }}>
               {state.coins?.map((coin, index) => {
                 return (
                   <div key={`${coin.symbol}-${index}`}>
@@ -69,6 +70,11 @@ function App() {
                 );
               })}
             </div>
+            {state?.coins?.length > 5 && (
+              <div style={{ marginTop: "10px", marginRight: "10px" }}>
+                <KeyboardDoubleArrowDownIcon />
+              </div>
+            )}
           </CurrencyListWrapper>
         </Box>
         <Box sx={{ gridArea: "center" }}>
