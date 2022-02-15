@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bitcasino-assignment/static/css/main.a09af029.css",
-    "main.js": "/bitcasino-assignment/static/js/main.10f7ec7f.js",
+    "main.js": "/bitcasino-assignment/static/js/main.1a2ae15f.js",
     "static/js/787.58c86c7f.chunk.js": "/bitcasino-assignment/static/js/787.58c86c7f.chunk.js",
     "static/media/figure.png": "/bitcasino-assignment/static/media/figure.d4ee58034783f18dcf05.png",
     "static/media/bg.png": "/bitcasino-assignment/static/media/bg.25ebef3e71a3ffd3f110.png",
@@ -9,11 +9,11 @@
     "static/media/icon.svg": "/bitcasino-assignment/static/media/icon.c2fb69d097e7795c1ad351b5618fcb36.svg",
     "index.html": "/bitcasino-assignment/index.html",
     "main.a09af029.css.map": "/bitcasino-assignment/static/css/main.a09af029.css.map",
-    "main.10f7ec7f.js.map": "/bitcasino-assignment/static/js/main.10f7ec7f.js.map",
+    "main.1a2ae15f.js.map": "/bitcasino-assignment/static/js/main.1a2ae15f.js.map",
     "787.58c86c7f.chunk.js.map": "/bitcasino-assignment/static/js/787.58c86c7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a09af029.css",
-    "static/js/main.10f7ec7f.js"
+    "static/js/main.1a2ae15f.js"
   ]
 }
