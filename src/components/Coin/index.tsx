@@ -23,13 +23,24 @@ interface Props {
   coin: Coin;
 }
 
+interface Market {
+  marketSymbol: string;
+  baseSymbol: string;
+  ticker: {
+    lastPrice: string;
+  } | null;
+}
+
 const CoinWrapper: FC<Props> = ({ dispatch, coin }) => {
   const { data, loading, error } = useQuery(FETCH_COIN_PRICE_QUERY, {
     variables: { search: coin.symbol },
     pollInterval: 5000,
   });
 
-  const price = data?.markets?.[0]?.ticker?.lastPrice;
+  const market = data?.markets?.find(
+    (market: Market) => market.ticker?.lastPrice
+  );
+  const price = market?.ticker?.lastPrice;
   const roundedPrice = Math.round(price * 100) / 100;
 
   return (
@@ -42,7 +53,7 @@ const CoinWrapper: FC<Props> = ({ dispatch, coin }) => {
         ) : isNaN(roundedPrice) ? (
           <div>Price unavailable!</div>
         ) : (
-          <div>{roundedPrice} $</div>
+          <div>{roundedPrice} €</div>
         )}
       </CoinDetails>
       <RemoveCoin onClick={() => dispatch({ type: "remove", payload: coin })}>

@@ -4,17 +4,25 @@
  - npm run start
 
 Voila!
-
 ## How to use
- - type the ticker symbol/name for your favourite cryptocurrency
+ - type the ticker symbol/name for your favorite cryptocurrency in the select box on the right.
+    - The dropdown searches the currencies based on symbol first and then name.
+    - Here is the order of fetched results based on input
+    - 1. Matching symbol by start of the input
+    - 2. Matching symbol by inclusion of the input
+    - 3. Matching name by start of the input
+    - 4. Matching name by inclusion of the input
  - select one from the dropdown list
  - click on Add button below to add it to your watch list
+ - The coin on the watch list is fetching price in Euros €.
+ - The price is taken from the first market value where tickerPrice is available.
+  - GraphQL server is polled at an interval of 5 seconds for latest price.
 
 ## Stack used
- - React.js @17
- - Material-UI @5.4
- - Emotion JS (CSS in JS) @11
- - Apollo Client @3.5
- - GraphQL @16.3
- - Lodash @4.17
- - Typescript @4.5
+ - React.js @17 - Frontend library for writing components
+ - Material-UI @5.4 - For rendering Grid based UI and specific UI components
+ - Emotion JS (CSS in JS) @11 - For styling components and customizing MUI components
+ - Apollo Client @3.5 - For query and mutation
+ - GraphQL @16.3 - For parsing response from GraphQL server
+ - Lodash @4.17 - For utility functions like debounce, escapeRegExp, etc.
+ - Typescript @4.5 - For type checking
