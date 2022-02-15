@@ -49,3 +49,4 @@ const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
 ## CI/CD
 
 - Build and Deployment done using GitHub Actions and Github Pages
+- Deployed site available here:- https://syedad218.github.io/bitcasino-assignment
