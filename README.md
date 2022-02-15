@@ -46,4 +46,6 @@ const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
 - Lodash @4.17 - For utility functions like debounce, escapeRegExp, etc.
 - Typescript @4.5 - For type checking
 
-## CI/CD:- Build and Deployment done using GitHub Actions and Github Pages
+## CI/CD
+
+- Build and Deployment done using GitHub Actions and Github Pages
