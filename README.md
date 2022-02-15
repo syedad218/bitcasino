@@ -45,3 +45,5 @@ const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
 - GraphQL @16.3 - For parsing response from GraphQL server
 - Lodash @4.17 - For utility functions like debounce, escapeRegExp, etc.
 - Typescript @4.5 - For type checking
+
+## CI/CD:- Build and Deployment done using GitHub Actions and Github Pages
