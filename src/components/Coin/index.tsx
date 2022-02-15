@@ -32,7 +32,7 @@ interface Market {
 }
 
 const CoinWrapper: FC<Props> = ({ dispatch, coin }) => {
-  const { data, loading, error } = useQuery(FETCH_COIN_PRICE_QUERY, {
+  const { data, loading } = useQuery(FETCH_COIN_PRICE_QUERY, {
     variables: { search: coin.symbol },
     pollInterval: 5000,
   });

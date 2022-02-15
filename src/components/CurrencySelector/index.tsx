@@ -40,7 +40,7 @@ const CurencySelector: FC<Props> = ({ dispatch, state }) => {
   const [alert, setAlert] = useState<boolean>(false);
   const isAddDisabled = value == null;
 
-  const { data, loading, error } = useQuery<Assets>(
+  const { data, loading } = useQuery<Assets>(
     FETCH_COINS_BY_SEARCH_QUERY
   );
 
