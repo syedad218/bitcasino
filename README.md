@@ -24,9 +24,9 @@ Voila!
 
 ```js
 const { data, loading, error } = useQuery(FETCH_COIN_PRICE_QUERY, {
-    variables: { search: coin.symbol },
-    pollInterval: 5000,
-  });
+  variables: { search: coin.symbol },
+  pollInterval: 5000,
+});
 ```
 
 ### Creating Regex for sorting search results ex:-
@@ -34,6 +34,19 @@ const { data, loading, error } = useQuery(FETCH_COIN_PRICE_QUERY, {
 ```js
 const regByInclusion = new RegExp(escapeRegExp(inputValue), "i");
 const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
+```
+
+### GraphQL query used for fetching all coins/assets to populate selector dropdown:-
+
+```js
+const FETCH_COINS_BY_SEARCH_QUERY = gql`
+  query GetCoinsList {
+    assets(filter: { assetSymbol: { _like: "%%" } }) {
+      assetName
+      assetSymbol
+    }
+  }
+`;
 ```
 
 ## Stack used
