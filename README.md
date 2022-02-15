@@ -6,6 +6,21 @@
 
 Voila!
 
+## Stack used
+
+- React.js @17 - Frontend library for writing components
+- Material-UI @5.4 - For rendering Grid based UI and specific UI components like Autocomplete, button, etc.
+- Emotion JS (CSS in JS) @11 - For styling components and customizing MUI components
+- Apollo Client @3.5 - Client interface for GraphQL query and mutation
+- GraphQL @16.3 - For parsing response from GraphQL server
+- Lodash @4.17 - For utility functions like debounce, escapeRegExp, etc.
+- Typescript @4.5 - For type checking
+
+## CI/CD
+
+- Build and Deployment done using GitHub Actions and Github Pages
+- Deployed site available here:- https://syedad218.github.io/bitcasino-assignment
+
 ## How to use
 
 - type the ticker symbol/name for your favorite cryptocurrency in the select box on the right.
@@ -48,21 +63,6 @@ const FETCH_COINS_BY_SEARCH_QUERY = gql`
   }
 `;
 ```
-
-## Stack used
-
-- React.js @17 - Frontend library for writing components
-- Material-UI @5.4 - For rendering Grid based UI and specific UI components like Autocomplete, button, etc.
-- Emotion JS (CSS in JS) @11 - For styling components and customizing MUI components
-- Apollo Client @3.5 - Client interface for GraphQL query and mutation
-- GraphQL @16.3 - For parsing response from GraphQL server
-- Lodash @4.17 - For utility functions like debounce, escapeRegExp, etc.
-- Typescript @4.5 - For type checking
-
-## CI/CD
-
-- Build and Deployment done using GitHub Actions and Github Pages
-- Deployed site available here:- https://syedad218.github.io/bitcasino-assignment
 
 ## UI Notes
 
