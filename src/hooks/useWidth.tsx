@@ -3,7 +3,9 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 type BreakpointOrNull = Breakpoint | null;
 
-const useWidth = () => {
+type WidthOptions = "xs" | "sm" | "md" | "lg" | "xl";
+
+const useWidth = (): WidthOptions => {
   const theme: Theme = useTheme();
   const keys: readonly Breakpoint[] = [...theme.breakpoints.keys].reverse();
   return (

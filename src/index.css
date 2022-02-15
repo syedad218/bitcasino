@@ -8,6 +8,11 @@ body {
   box-sizing: border-box;
   background-color: #2a0a4a;
   position: relative;
+  color: white;
+}
+
+.App {
+  line-height: 1.4;
 }
 
 .bg-img {
@@ -27,9 +32,6 @@ body {
 .figure-container {
   position: relative;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   min-height: 420px;
 }
 
@@ -40,23 +42,11 @@ body {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 100%;
-  height: 95%;
+  width: 110%;
+  height: 100%;
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-.title {
-  max-width: 327px;
-  color: #fff;
-  line-height: 1.4;
-}
-
-.subtext {
-  color: grey;
-  font-weight: 500;
-  max-width: 230px;
 }
 
 code {

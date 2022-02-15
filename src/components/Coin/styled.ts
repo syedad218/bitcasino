@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
-export const CoinListContainer = styled.div`
-  max-width: 350px;
+export const CoinContainer = styled.div`
+  max-width: 280px;
   display: flex;
   align-items: center;
   padding: 16px 0;
@@ -17,26 +17,30 @@ export const CoinListContainer = styled.div`
 `;
 
 export const CoinDetails = styled.div`
-  margin-left: 32px;
+  margin-left: 24px;
   color: #ffffff;
+  line-height: 1.6;
   div:first-of-type {
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 16px;
   }
   div:last-of-type {
     font-size: 14px;
     opacity: 0.5;
-    margin-top: 8px;
   }
 `;
 
-export const CloseCoin = styled.div`
+export const RemoveCoin = styled.div`
   cursor: pointer;
   margin-left: auto;
+  border-radius: 50%;
+  padding: 5px;
   > svg {
     display: block;
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
     fill: rgba(255, 255, 255, 0.5);
+  }
+  :hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 `;
