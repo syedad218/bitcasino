@@ -50,3 +50,25 @@ const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
 
 - Build and Deployment done using GitHub Actions and Github Pages
 - Deployed site available here:- https://syedad218.github.io/bitcasino-assignment
+
+## UI Notes
+
+- Made a custom function which uses MUI's useMediaQuery hook to check for screen size.
+- using this function added breakpoints to the page layout.
+
+```
+import { Breakpoint, Theme, useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
+const useWidth = (): WidthOptions => {
+  const theme: Theme = useTheme();
+  const keys: readonly Breakpoint[] = [...theme.breakpoints.keys].reverse();
+  return (
+    keys.reduce((output: BreakpointOrNull, key: Breakpoint) => {
+      // eslint-disable-next-line react-hooks/rules-of-hooks
+      const matches = useMediaQuery(theme.breakpoints.up(key));
+      return !output && matches ? key : output;
+    }, null) || "xs"
+  );
+};
+```
