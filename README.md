@@ -9,7 +9,6 @@ Voila!
 ## How to use
 
 - type the ticker symbol/name for your favorite cryptocurrency in the select box on the right.
-  - The dropdown searches the currencies based on symbol first and then name.
   - Here is the order of fetched results based on input
   - 1. Matching symbol by start of the input
   - 2. Matching symbol by inclusion of the input
