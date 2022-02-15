@@ -39,9 +39,9 @@ const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
 ## Stack used
 
 - React.js @17 - Frontend library for writing components
-- Material-UI @5.4 - For rendering Grid based UI and specific UI components
+- Material-UI @5.4 - For rendering Grid based UI and specific UI components like Autocomplete, button, etc.
 - Emotion JS (CSS in JS) @11 - For styling components and customizing MUI components
-- Apollo Client @3.5 - For query and mutation
+- Apollo Client @3.5 - Client interface for GraphQL query and mutation
 - GraphQL @16.3 - For parsing response from GraphQL server
 - Lodash @4.17 - For utility functions like debounce, escapeRegExp, etc.
 - Typescript @4.5 - For type checking
