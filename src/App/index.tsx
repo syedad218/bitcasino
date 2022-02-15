@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import CurrencySelector from "../components/CurrencySelector";
 import logo from "../assets/logo.svg";
 import Box from "@mui/material/Box";
@@ -61,20 +62,19 @@ function App() {
             </h3>
           </div>
           <CurrencyListWrapper>
-            <div style={{ maxHeight: "400px", overflow: "auto" }}>
-              {state.coins?.map((coin, index) => {
-                return (
-                  <div key={`${coin.symbol}-${index}`}>
-                    <Coin dispatch={dispatch} coin={coin} />
-                  </div>
-                );
-              })}
+            <div style={{ maxHeight: "calc(100vh - 375px)", overflow: "auto" }}>
+              {Array.isArray(state.coins) && state.coins.length > 0 ? (
+                state.coins.map((coin, index) => {
+                  return (
+                    <div key={`${coin.symbol}-${index}`}>
+                      <Coin dispatch={dispatch} coin={coin} />
+                    </div>
+                  );
+                })
+              ) : (
+                <div className="empty-text">Your watchlist will show here!</div>
+              )}
             </div>
-            {state?.coins?.length > 5 && (
-              <div style={{ marginTop: "10px", marginRight: "10px" }}>
-                <KeyboardDoubleArrowDownIcon />
-              </div>
-            )}
           </CurrencyListWrapper>
         </Box>
         <Box sx={{ gridArea: "center" }}>
