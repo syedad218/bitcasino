@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const CoinContainer = styled.div`
-  max-width: 300px;
+  margin-top: 0.5em;
   display: flex;
   align-items: center;
   padding: 16px 0;

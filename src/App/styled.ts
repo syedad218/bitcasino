@@ -14,7 +14,9 @@ export const Title = styled.div`
 
 export const CoinListWrapper = styled.div`
   max-height: calc(100vh - 375px);
-  margin-top: 2rem;
+  max-width: 300px;
+  padding-right: 10px;
+  margin-top: 1.5em;
   overflow: auto;
   & > p {
     color: grey;
