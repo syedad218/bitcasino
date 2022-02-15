@@ -34,7 +34,7 @@ const { data, loading, error } = useQuery(FETCH_COIN_PRICE_QUERY, {
 
 ```
 const regByInclusion = new RegExp(escapeRegExp(inputValue), "i");
-  const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
+const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
 ```
 
 ## Stack used
