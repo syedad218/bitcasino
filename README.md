@@ -22,7 +22,7 @@ Voila!
 
 ### Polling Query ex:-
 
-```
+```js
 const { data, loading, error } = useQuery(FETCH_COIN_PRICE_QUERY, {
     variables: { search: coin.symbol },
     pollInterval: 5000,
@@ -31,7 +31,7 @@ const { data, loading, error } = useQuery(FETCH_COIN_PRICE_QUERY, {
 
 ### Creating Regex for sorting search results ex:-
 
-```
+```js
 const regByInclusion = new RegExp(escapeRegExp(inputValue), "i");
 const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
 ```
@@ -56,7 +56,7 @@ const regByStart = new RegExp(`^${escapeRegExp(inputValue)}`, "i");
 - Made a custom function which uses MUI's useMediaQuery hook to check for screen size.
 - using this function added breakpoints to the page layout.
 
-```
+```js
 import { Breakpoint, Theme, useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
