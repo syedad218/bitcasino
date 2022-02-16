@@ -67,7 +67,7 @@ const FETCH_COINS_BY_SEARCH_QUERY = gql`
 ## UI Notes 📝
 
 - Made a custom function which uses MUI's useMediaQuery hook to check for screen size.
-- using this function added breakpoints to the page layout.
+- using this function added breakpoints to the page layout for implementing a CSS grid which can move in both x and y directions.
 
 ```js
 import { Breakpoint, Theme, useTheme } from "@mui/material/styles";
