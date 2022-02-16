@@ -14,7 +14,7 @@ Voila!
 - Apollo Client @3.5 - Client interface for GraphQL query and mutation - [Apollo Client](https://www.apollographql.com/)
 - GraphQL @16.3 - For parsing response from GraphQL server - [GraphQL](https://graphql.org/)
 - Lodash @4.17 - For utility functions like debounce, escapeRegExp, etc. - [Lodash](https://lodash.com/)
-- Typescript @4.5 - For type checking
+- Typescript @4.5 - For type checking - [Typescript](https://www.typescriptlang.org/)
 
 ## CI/CD 🔥
 
